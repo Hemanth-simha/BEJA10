@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 public class MyFirstServlet extends HttpServlet{
 
 	@Override
-	protected void doGet(HttpServletRequest req,
+	protected void doPost(HttpServletRequest req,
 			HttpServletResponse resp)
 			throws ServletException, IOException {
 		
@@ -20,6 +20,12 @@ public class MyFirstServlet extends HttpServlet{
 		PrintWriter out = resp.getWriter();
 		out.println("Current Date and Time as Response : "+date);
 		resp.setContentType("text/html");
+	}
+	
+	@Override
+	protected void doGet(HttpServletRequest req,
+			HttpServletResponse resp) throws ServletException, IOException {
+		//logic
 	}
 	
 }
